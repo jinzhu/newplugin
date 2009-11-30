@@ -27,7 +27,8 @@ class AppGenerator < RubiGen::Base
       m.template "lib/module.rb","lib/#{file_name}.rb"
       m.template "tasks/tasks.rake","tasks/#{file_name}_tasks.rake"
 
-      %w( test/app_root/config/boot.rb
+      m.file_copy_each %w(
+        test/app_root/config/boot.rb
         test/app_root/config/database.yml
         test/app_root/config/environment.rb
         test/app_root/config/environments/in_memory.rb
@@ -37,9 +38,7 @@ class AppGenerator < RubiGen::Base
         test/app_root/config/environments/sqlite3.rb
         test/app_root/config/initializers/plugin.rb
         test/app_root/config/routes.rb
-      ).map do |f|
-        m.file f,f
-      end
+      )
     end
   end
 
