@@ -17,7 +17,7 @@ end
 # PluginTest::CLI.execute(STDOUT, ARGV)
 
 require 'rubigen/scripts/generate'
-source = RubiGen::PathSource.new(:application,File.join(File.dirname(__FILE__), "../app_generators"))
+source = RubiGen::PathSource.new(:application,File.join(File.dirname(__FILE__), "../generators"))
 RubiGen::Base.reset_sources
 RubiGen::Base.append_sources source
 RubiGen::Scripts::Generate.new.run(ARGV, :generator => 'app')
