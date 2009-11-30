@@ -18,6 +18,7 @@ class AppGenerator < RubiGen::Base
     record do |m|
       %w(
         lib tasks test test/app_root test/unit test/app_root/app/controllers
+        test/app_root/config/environments test/app_root/config/initializers
       ).each do |path|
         m.directory path
       end
@@ -25,6 +26,20 @@ class AppGenerator < RubiGen::Base
       m.template_copy_each %w(MIT-LICENSE README Rakefile init.rb install.rb uninstall.rb test/test_helper.rb test/app_root/app/controllers/application_controller.rb)
       m.template "lib/module.rb","lib/#{file_name}.rb"
       m.template "tasks/tasks.rake","tasks/#{file_name}_tasks.rake"
+
+      %w( test/app_root/config/boot.rb
+        test/app_root/config/database.yml
+        test/app_root/config/environment.rb
+        test/app_root/config/environments/in_memory.rb
+        test/app_root/config/environments/mysql.rb
+        test/app_root/config/environments/postgresql.rb
+        test/app_root/config/environments/sqlite.rb
+        test/app_root/config/environments/sqlite3.rb
+        test/app_root/config/initializers/plugin.rb
+        test/app_root/config/routes.rb
+      ).map do |f|
+        m.file f,f
+      end
     end
   end
 
