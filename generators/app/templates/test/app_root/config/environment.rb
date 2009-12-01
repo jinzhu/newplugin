@@ -7,7 +7,7 @@ Rails::Initializer.run do |config|
   config.whiny_nils = true
 
   # test/app_root/config/environment.rb
-  config.load_paths += File.join(File.dirname(__FILE__), '../../../lib')
+  config.load_paths << File.join(File.dirname(__FILE__), '../../../lib')
 
   config.action_controller.session = {
     :key    => '_plugin_test_session',
