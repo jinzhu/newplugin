@@ -2,7 +2,7 @@ History.txt
 Manifest.txt
 README.rdoc
 Rakefile
-bin/newplugin
+bin/newplugin-gen
 generators/app/USAGE
 generators/app/app_generator.rb
 generators/app/templates/MIT-LICENSE
