@@ -21,4 +21,4 @@ require 'rubigen/scripts/generate'
 source = RubiGen::PathSource.new(:application,File.join(File.dirname(__FILE__), "../generators"))
 RubiGen::Base.reset_sources
 RubiGen::Base.append_sources source
-RubiGen::Scripts::Generate.new.run(ARGV[1].to_a, :generator => generate)
+RubiGen::Scripts::Generate.new.run(ARGV[1..-1], :generator => generate)

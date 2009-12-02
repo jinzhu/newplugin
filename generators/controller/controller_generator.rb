@@ -1,12 +1,13 @@
 class ControllerGenerator < RubiGen::Base
 
-  attr_reader :name,:class_name,:file_name
+  attr_reader :name,:class_name,:file_name,:actions
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
     @destination_root = File.expand_path('.')
-    @name = args.shift
+    @name             = args.shift
+    @actions          = args
 
     @file_name     = @name.pluralize.underscore
     @class_name    = @name.singularize.classify

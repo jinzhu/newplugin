@@ -6,12 +6,12 @@ class AppGenerator < RubiGen::Base
     super
     usage if args.empty?
     @destination_root = File.expand_path(args.shift)
-    @name = base_name
-    @plural_name   = @name.pluralize.underscore
-    @singular_name = @name.singularize.underscore
+    @name             = base_name
+    @plural_name      = @name.pluralize.underscore
+    @singular_name    = @name.singularize.underscore
 
-    @file_name     = @name.singularize.underscore
-    @class_name    = @name.singularize.classify
+    @file_name        = @name.singularize.underscore
+    @class_name       = @name.singularize.classify
   end
 
   def manifest
