@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestPluginTestTool < Test::Unit::TestCase
+class TestNewplugin < Test::Unit::TestCase
 
   def setup
   end

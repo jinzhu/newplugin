@@ -5,8 +5,8 @@
 #  ZhangJinzhu <wosmvp@gmail.com>
 
 require 'rubygems'
-require File.expand_path(File.dirname(__FILE__) + "/../lib/plugin_test_tool")
-require "plugin_test/cli"
+require File.expand_path(File.dirname(__FILE__) + "/../lib/newplugin")
+require "newplugin/cli"
 require 'rubigen'
 
 if %w(-v --version).include? ARGV.first
@@ -15,7 +15,7 @@ if %w(-v --version).include? ARGV.first
 end
 
 generate = ARGV[0]
-# PluginTest::CLI.execute(STDOUT, ARGV)
+# Newplugin.execute(STDOUT, ARGV)
 
 require 'rubigen/scripts/generate'
 source = RubiGen::PathSource.new(:application,File.join(File.dirname(__FILE__), "../generators"))

@@ -1,6 +1,6 @@
 require 'optparse'
 
-module PluginTest
+module Newplugin
   class CLI
     def self.execute(stdout, arguments=[])
 
@@ -36,7 +36,7 @@ module PluginTest
       path = options[:path]
 
       # do stuff
-      stdout.puts "To update this executable, look in lib/plugin_test/cli.rb"
+      stdout.puts "To update this executable, look in lib/newplugin/cli.rb"
     end
   end
 end

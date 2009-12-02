@@ -1,10 +1,10 @@
-= plugin_test_tool
+= newplugin
 
-* http://github.com/jinzhu/plugin_test_tool
+* http://github.com/jinzhu/newplugin
 
 == DESCRIPTION:
 
-  plugin test tool
+  New Plugin Generator, make it dead easy to create a new plugin
 
 == LICENSE:
 
