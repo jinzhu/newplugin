@@ -15,10 +15,10 @@ class ModelGenerator < RubiGen::Base
 			@attributes << {:type => x.split(/:/)[1],:name => x.split(/:/)[0]}
 		end
 
-    @file_name  = @name.pluralize.underscore
+    @file_name  = @name.singularize.underscore
     @class_name = @name.singularize.classify
-    @class_path = File.dirname(@file_name)
-		@table_name = file_name.gsub(/\//, '_').pluralize
+    @class_path = File.dirname(file_name)
+		@table_name = @name.pluralize.underscore.gsub(/\//, '_').pluralize
   end
 
   def manifest
