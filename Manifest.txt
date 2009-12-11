@@ -12,6 +12,7 @@ generators/app/templates/init.rb
 generators/app/templates/install.rb
 generators/app/templates/lib/module.rb
 generators/app/templates/tasks/tasks.rake
+generators/app/templates/test/app_root/app/controllers/application.rb
 generators/app/templates/test/app_root/app/controllers/application_controller.rb
 generators/app/templates/test/app_root/config/boot.rb
 generators/app/templates/test/app_root/config/database.yml

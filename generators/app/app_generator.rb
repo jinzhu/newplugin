@@ -23,7 +23,7 @@ class AppGenerator < RubiGen::Base
         m.directory path
       end
 
-      m.template_copy_each %w(MIT-LICENSE README Rakefile init.rb install.rb uninstall.rb test/test_helper.rb test/app_root/app/controllers/application_controller.rb)
+      m.template_copy_each %w(MIT-LICENSE README Rakefile init.rb install.rb uninstall.rb test/test_helper.rb test/app_root/app/controllers/application_controller.rb test/app_root/app/controllers/application.rb)
       m.template "lib/module.rb","lib/#{file_name}.rb"
       m.template "tasks/tasks.rake","tasks/#{file_name}_tasks.rake"
 
