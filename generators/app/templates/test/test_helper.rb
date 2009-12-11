@@ -3,4 +3,4 @@ require 'test_help'
 
 # Run the migrations
 ActiveRecord::Migration.verbose = false
-ActiveRecord::Migrator.migrate("#{RAILS_ROOT}/db/migrate")
+ActiveRecord::Migrator.migrate("#{PLUGIN_RAILS_ROOT}/db/migrate")

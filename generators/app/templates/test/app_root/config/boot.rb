@@ -1,4 +1,5 @@
-RAILS_ROOT = "#{File.dirname(__FILE__)}/.." unless defined?(RAILS_ROOT)
+PLUGIN_RAILS_ROOT = "#{File.dirname(__FILE__)}/.."
+RAILS_ROOT = PLUGIN_RAILS_ROOT unless defined?(RAILS_ROOT)
 
 module Rails
   class << self
