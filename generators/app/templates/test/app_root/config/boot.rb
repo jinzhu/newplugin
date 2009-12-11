@@ -59,7 +59,7 @@ module Rails
         gem 'rails'
       end
     rescue Gem::LoadError => load_error
-      $stderr.puts %(Missing the Rails #{version} gem. Please `gem install -v=#{version} rails`, update your RAILS_GEM_VERSION setting in config/environment.rb for the Rails version you do have installed, or comment out RAILS_GEM_VERSION to use the latest version installed.)
+      $stderr.puts %(Missing the Rails #{version} gem. Please `gem install -v=#{version} rails`.)
       exit 1
     end
 
@@ -69,10 +69,10 @@ module Rails
       end
 
       def gem_version
-        if defined? RAILS_GEM_VERSION
-          RAILS_GEM_VERSION
-        elsif ENV.include?('RAILS_GEM_VERSION')
-          ENV['RAILS_GEM_VERSION']
+        if defined? RAILS_VERSION
+          RAILS_VERSION
+        elsif ENV.include?('RAILS_VERSION')
+          ENV['RAILS_VERSION']
         else
           parse_gem_version(read_environment_rb)
         end
@@ -92,7 +92,7 @@ module Rails
       end
 
       def parse_gem_version(text)
-        $1 if text =~ /^[^#]*RAILS_GEM_VERSION\s*=\s*["']([!~<>=]*\s*[\d.]+)["']/
+        $1 if text =~ /^[^#]*RAILS_VERSION\s*=\s*["']([!~<>=]*\s*[\d.]+)["']/
       end
 
       private
