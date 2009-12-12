@@ -19,4 +19,12 @@ class MigrationGenerator < RubiGen::Base
       m.migration_template 'migration.rb', "test/app_root/db/migrate"
     end
   end
+
+  protected
+    def banner
+      <<-EOS
+USAGE: #{File.basename($0)} #{spec.name} MigrationName [options]
+
+EOS
+    end
 end
