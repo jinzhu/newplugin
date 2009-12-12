@@ -2,4 +2,4 @@ Description:
     Stubs out a new controller.pass the controller name,either CamelCased or under_scored
 
 Example:
-    `./script/generate controller CreditCard open debit credit close
+    `newplugin-gen controller CreditCard open debit credit close

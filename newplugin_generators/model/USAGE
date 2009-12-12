@@ -10,6 +10,6 @@ Description:
   sketch out a few so you can start working with the model immediately.
 
 Examples:
-    `./script/generate model account`
+    `newplugin-gen model account`
 
-    `./script/generate model post title:string body:text published:boolean`
+    `newplugin-gen model post title:string body:text published:boolean`

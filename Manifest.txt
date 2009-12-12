@@ -38,6 +38,8 @@ newplugin_generators/model/model_generator.rb
 newplugin_generators/model/templates/fixtures.yml
 newplugin_generators/model/templates/migration.rb
 newplugin_generators/model/templates/model.rb
+newplugin_generators/scaffold/USAGE
+newplugin_generators/scaffold/scaffold_generator.rb
 test/test_generator_helper.rb
 test/test_helper.rb
 test/test_new_plugin.rb

@@ -1,0 +1,19 @@
+Description:
+    Scaffolds an entire resource, from model and migration to controller
+
+    Pass the name of the model (in singular form), either CamelCased or
+    under_scored, as the first argument, and an optional list of attribute
+    pairs.
+
+    Attribute pairs are column_name:sql_type arguments specifying the
+    model's attributes. Timestamps are added by default, so you don't have to
+    specify them by hand as 'created_at:datetime updated_at:datetime'.
+
+    You don't have to think up every attribute up front, but it helps to
+    sketch out a few so you can start working with the resource immediately.
+
+Examples:
+    `newplugin-gen scaffold post`
+    `newplugin-gen scaffold post title:string body:text published:boolean`
+    `newplugin-gen scaffold purchase order_id:integer amount:decimal`
+

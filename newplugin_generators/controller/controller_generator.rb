@@ -9,8 +9,8 @@ class ControllerGenerator < RubiGen::Base
     @name             = args.shift
     @actions          = args
 
-    @file_name     = @name.underscore
-    @class_name    = @name.classify
+    @file_name  = @name.underscore
+    @class_name = @name.pluralize == @name ? @name.classify.pluralize : @name.classify
   end
 
   def manifest
