@@ -13,8 +13,9 @@ if %w(-v --version).include? ARGV.first
   exit(0)
 end
 
-generator  = ARGV[0]
-generators = Dir[File.join(File.dirname(__FILE__), "../generators/*")].map {|f| File.basename(f) }
+generator       = ARGV[0]
+generators_path = File.join(File.dirname(__FILE__), "../newplugin_generators")
+generators      = Dir[File.join(generators_path,'*')].map {|f| File.basename(f) }
 
 unless generators.include?(generator)
   puts <<-DOC
@@ -27,7 +28,6 @@ unless generators.include?(generator)
 end
 
 require 'rubigen/scripts/generate'
-source = RubiGen::PathSource.new(:application,File.join(File.dirname(__FILE__), "../generators"))
 RubiGen::Base.reset_sources
-RubiGen::Base.append_sources source
+RubiGen::Base.append_sources RubiGen::PathSource.new(:application,generators_path)
 RubiGen::Scripts::Generate.new.run(ARGV[1..-1], :generator => generator)
