@@ -9,14 +9,22 @@ class ControllerGenerator < RubiGen::Base
     @name             = args.shift
     @actions          = args
 
-    @file_name     = @name.pluralize.underscore
-    @class_name    = @name.singularize.classify
+    @file_name     = @name.underscore
+    @class_name    = @name.classify
   end
 
   def manifest
     record do |m|
-      m.directory "test/app_root/app/controllers"
+      m.directory File.dirname("test/app_root/app/controllers/#{file_name}")
       m.template "controller.rb","test/app_root/app/controllers/#{file_name}_controller.rb"
     end
   end
+
+  protected
+    def banner
+      <<-EOS
+USAGE: #{File.basename($0)} #{spec.name} ControllerName [action] [action] [options]
+
+EOS
+    end
 end
