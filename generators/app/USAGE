@@ -1,5 +1,5 @@
 Description:
+  Stubs out a new plugin. Pass the plugin name, either CamelCased or under_scored
   
-  
-Usage:
-  
+Example:
+  `newplugin-gen app myNewPlugin`

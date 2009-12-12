@@ -45,9 +45,8 @@ class AppGenerator < RubiGen::Base
   protected
     def banner
       <<-EOS
-Creates a new plugin
+USAGE: #{File.basename($0)} #{spec.name} PluginName [options]
 
-USAGE: #{spec.name} name
 EOS
     end
 end
