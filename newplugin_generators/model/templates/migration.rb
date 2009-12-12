@@ -4,6 +4,8 @@ class <%= migration_name %> < ActiveRecord::Migration
 <% for attribute in attributes -%>
       t.<%= attribute[:type] %> :<%= attribute[:name] %>
 <% end -%>
+      t.column :created_at, :datetime
+      t.column :updated_at, :datetime
     end
   end
 

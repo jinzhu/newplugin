@@ -32,4 +32,12 @@ class ModelGenerator < RubiGen::Base
       }, :migration_file_name => "create_#{@table_name}"
     end
   end
+
+  protected
+    def banner
+      <<-EOS
+USAGE: #{File.basename($0)} #{spec.name} ModelName [field:type, field:type]
+
+EOS
+    end
 end
