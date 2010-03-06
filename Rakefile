@@ -13,8 +13,8 @@ Hoe.plugin :newgem
 $hoe = Hoe.spec 'newplugin' do
   self.developer 'ZhangJinzhu', 'wosmvp@gmail.com'
   # self.post_install_message = 'PostInstall.txt'
-  self.rubyforge_name       = self.name
-  # self.extra_deps         = [['activesupport','>= 2.0.2']]
+  self.rubyforge_name     = self.name
+  self.extra_deps         = [['thor']]
 end
 
 require 'newgem/tasks'
