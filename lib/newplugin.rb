@@ -1,6 +1,5 @@
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
+require 'thor/group'
 
-module Newplugin 
-  VERSION = '0.0.4'
+class NewPlugin < Thor::Group
+  include Thor::Actions
 end

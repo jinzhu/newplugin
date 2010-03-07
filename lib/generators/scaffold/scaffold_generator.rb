@@ -1,7 +1,15 @@
-require 'rubygems'
-require 'active_record'
+require 'thor/group'
 
-class ScaffoldGenerator < RubiGen::Base
+class ScaffoldGenerator < Thor::Group
+  include Thor::Actions
+
+  def self.source_root
+    @_source_root ||= File.expand_path("../templates", __FILE__)
+  end
+
+  def self.destination_root
+    @_destination_root ||= File.expand_path(".")
+  end
 
   def initialize(runtime_args, runtime_options = {})
     super
