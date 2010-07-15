@@ -13,7 +13,7 @@ class AppGenerator < NewPlugin
 
   attr_reader :name,:plural_name,:singular_name,:class_name,:file_name
 
-  def initialize(runtime_args, runtime_options = {})
+  def initialize(args, opts, runtime_options = {})
     super
     usage if args.empty?
     @destination_root = File.expand_path(args.shift)
