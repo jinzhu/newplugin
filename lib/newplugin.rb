@@ -1,5 +1,5 @@
-require 'thor/group'
+require 'rubygems'
+require 'rails/generators'
 
-class NewPlugin < Thor::Group
-  include Thor::Actions
+class NewPlugin < Rails::Generators::Base
 end
