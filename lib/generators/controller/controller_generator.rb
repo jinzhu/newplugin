@@ -1,4 +1,4 @@
-class ControllerGenerator < RubiGen::Base
+class ControllerGenerator < NewPlugin
 
   attr_reader :name,:class_name,:file_name,:actions
 

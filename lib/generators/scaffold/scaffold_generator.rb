@@ -1,8 +1,4 @@
-require 'thor/group'
-
-class ScaffoldGenerator < Thor::Group
-  include Thor::Actions
-
+class ScaffoldGenerator < NewPlugin
   def self.source_root
     @_source_root ||= File.expand_path("../templates", __FILE__)
   end

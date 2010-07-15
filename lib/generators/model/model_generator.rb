@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'active_record'
 
-class ModelGenerator < RubiGen::Base
+class ModelGenerator < NewPlugin
   attr_reader :name,:class_name,:file_name,:class_path,:table_name,:attributes
 
   def initialize(runtime_args, runtime_options = {})

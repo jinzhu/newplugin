@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'active_record'
 
-class MigrationGenerator < RubiGen::Base
+class MigrationGenerator < NewPlugin
 
   attr_reader :name,:class_name,:file_name
 
